@@ -25,7 +25,7 @@
 	"plugins": {
 		"hotswap": {
 			"endpoint": "https://grindapi.imaoreo.dev/api/updates/{{current_sequence}}",
-			"pubkey": "RWRJW9mxbpaZjWQ7RPUHMYHtIPXb5r3uRCxnf/IrVaNHGr70C/MewrYZ"
+			"pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEQ4QTEwMUU2MzkwMEFGMUUKUldRZXJ3QTU1Z0doMkE5THg3Tjc5Tmhkd0FxYktVVjVzdk9pMzd3VXlwbVVuZmM0MGFaRW9VUTgK"
 		}
 	}
 }
