@@ -1,0 +1,18 @@
+name: Generate Signer Key
+
+on:
+  workflow_dispatch:
+
+jobs:
+  gen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: oven-sh/setup-bun@v2
+
+      - name: Generate key
+        run: |
+          bunx @tauri-apps/cli signer generate -w ./hotswap.key
+          echo "=== PRIVATE KEY ==="
+          cat ./hotswap.key
+          echo "=== PUBLIC KEY ==="
+          cat ./hotswap.key.pub
