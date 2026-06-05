@@ -330,6 +330,11 @@ jobs:
           echo "$ANDROID_KEYSTORE_BASE64" | base64 -d > src-tauri/certs/free-grind-dev.jks
 
       - name: Build Android APK
+        env:
+          ANDROID_KEYSTORE_PATH: ${{ github.workspace }}/src-tauri/certs/free-grind-dev.jks
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
         run: bunx tauri android build --apk -v
 
       - name: Upload Android APK to release
