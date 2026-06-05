@@ -245,7 +245,7 @@ class FreeGrindFirebaseMessagingService : FirebaseMessagingService() {
 
         val builder = NotificationCompat.Builder(this, channelId)
             // Status-bar icon: monochrome stencil with transparent background only.
-            .setSmallIcon(R.drawable.ic_notification_silhouette)
+            .setSmallIcon(R.drawable.ic_notification_stencil)
             .setShortcutId(conversationId)
             .addPerson(sender)
             // Keep the badge overlay neutral and avoid OEM color plates.
@@ -271,8 +271,8 @@ class FreeGrindFirebaseMessagingService : FirebaseMessagingService() {
             return senderBitmap
         }
 
-        val fallback = BitmapFactory.decodeResource(resources, R.drawable.blank_profile)
-            ?: Bitmap.createBitmap(128, 128, Bitmap.Config.ARGB_8888)
+        val fallback = Bitmap.createBitmap(128, 128, Bitmap.Config.ARGB_8888)
+
         return makeBlackPixelsTransparent(fallback)
     }
 
